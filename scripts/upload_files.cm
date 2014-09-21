@@ -17,7 +17,6 @@ LABELS="Type-Archive,OpSys-All,${1},${2}"
 ./googlecode_upload.py -s "Full Hamcrest distribution (tgz)" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-$VERSION.tgz
 ./googlecode_upload.py -s "Full Hamcrest distribution (zip)" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-$VERSION.zip
 ./googlecode_upload.py -s "Hamcrest core Jar (bare-bones minimum)" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-core-$VERSION.jar
-./googlecode_upload.py -s "Hamcrest all-in-one Jar" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-all-$VERSION.jar
 ./googlecode_upload.py -s "Hamcrest code generator tool" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-generator-$VERSION.jar
 ./googlecode_upload.py -s "Hamcrest testing library integration" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-integration-$VERSION.jar
 ./googlecode_upload.py -s "Hamcrest additional library of matchers" -p hamcrest ${CREDENTIALS} -l "$LABELS" $BUILD_DIR/hamcrest-library-$VERSION.jar

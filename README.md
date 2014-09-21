@@ -23,10 +23,6 @@ Depending on how you intend to use Hamcrest, you should use different Jars.
   * __hamcrest-generator.jar__ -- A tool to allow many Matcher implementations to be combined into a single class so users don't have to remember many classes/packages to import. Generates code.
   * __hamcrest-integration.jar__ -- Provides integration between Hamcrest and other testing tools, including JUnit (3 and 4), TestNG, jMock and EasyMock.
 
-Alternatively, if you don't care:
-
- * __hamcrest-all.jar__ -- Includes all of the above.
-
 Sources and JavaDoc jars are available for all of the above.
 
 Extensions

@@ -95,27 +95,6 @@
             <fileset dir="build/temp/hamcrest-api-${version}-sources.jar.contents"/>
         </copy>
         <jar-module modulename="hamcrest-core"/>
-
-        <!-- Bundle core, library, integration, and generator into all jar-->
-        <copy todir="build/temp/hamcrest-all-${version}.jar.contents">
-            <fileset dir="build/temp/hamcrest-core-${version}.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-library-${version}.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-integration-${version}.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-generator-${version}.jar.contents"/>
-        </copy>
-        <copy todir="build/temp/hamcrest-all-${version}-sources.jar.contents">
-            <fileset dir="build/temp/hamcrest-core-${version}-sources.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-library-${version}-sources.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-integration-${version}-sources.jar.contents"/>
-            <fileset dir="build/temp/hamcrest-generator-${version}-sources.jar.contents"/>
-        </copy>
-        <path id="cp-hamcrest-all-main">
-            <path refid="cp-hamcrest-core-main"/>
-            <path refid="cp-hamcrest-library-main"/>
-            <path refid="cp-hamcrest-integration-main"/>
-            <path refid="cp-hamcrest-generator-main"/>
-        </path>
-        <jar-module modulename="hamcrest-all"/>
     </target>
 
     <target name="javadoc" depends="bigjar" description="build javadoc jars">
@@ -123,7 +102,6 @@
         <javadoc-module modulename="hamcrest-core"/>
         <javadoc-module modulename="hamcrest-library"/>
         <javadoc-module modulename="hamcrest-integration"/>
-        <javadoc-module modulename="hamcrest-all"/>
     </target>
 
     <target name="bundle" description="Create a release bundle for deployment to maven central" depends="clean, javadoc">
@@ -140,7 +118,6 @@
         <bundle-module modulename="hamcrest-generator"/>
         <bundle-module modulename="hamcrest-library"/>
         <bundle-module modulename="hamcrest-integration"/>
-        <bundle-module modulename="hamcrest-all"/>
     </target>
 
     <macrodef name="make-manifest">
