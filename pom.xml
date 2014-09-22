@@ -72,5 +72,7 @@
 
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+    <easymock.version>2.2</easymock.version>
+    <junit.version>4.11</junit.version>
   </properties>
 </project>
