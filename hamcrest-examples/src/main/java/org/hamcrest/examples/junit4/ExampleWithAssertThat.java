@@ -33,21 +33,21 @@ public class ExampleWithAssertThat {
     public static junit.framework.Test suite() {
         return new junit.framework.JUnit4TestAdapter(ExampleWithAssertThat.class);
     }
-    
+
     public static class ComplicatedClass {
       private int firstNumber = 23;
       private int secondNumber = 45;
       private String someText = "This is useful text";
-      
+
       public String whichOne(boolean first) {
         return someText + (first ? firstNumber : secondNumber);
       }
     }
-    
-    @Test
+
+    @Test(expected = AssertionError.class)
     public void showMismatch() {
       ComplicatedClass complicated = new ComplicatedClass();
-      
+
       assertThat(complicated, shouldBe("the wrong thing"));
     }
 
@@ -60,7 +60,7 @@ public class ExampleWithAssertThat {
         @Override
         public void describeMismatchSafely(ComplicatedClass item, Description mismatchDescription) {
           mismatchDescription.appendText(string);
-        } 
+        }
       };
     }
 

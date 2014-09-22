@@ -68,6 +68,7 @@
     <module>hamcrest-generator</module>
     <module>hamcrest-library</module>
     <module>hamcrest-integration</module>
+    <module>hamcrest-examples</module>
   </modules>
 
   <properties>
